@@ -1,0 +1,27 @@
+name: ideatc
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.9
+  - jupyter
+  - numpy
+  - pandas=1.5
+  - xarray=2023.4
+  - openpyxl
+  - plotly::plotly==5.14.1
+  - python-kaleido  # static image export from plotly
+  - scikit-learn==1.2.1
+  - pytorch::pytorch=2.0
+  - huggingface::datasets=2.10
+  - huggingface::transformers=4.26
+  - tqdm
+  - pip
+  - pip:
+      - gensim~=4.3.1
+      - spacy[apple]~=3.5.1; sys_platform == 'darwin' # Apple Silicon only
+#      - spacy[cuda-autodetect]~=3.5.1; sys_platform == 'linux' # CUDA-enabled Linux only
+      - https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.5.0/en_core_web_sm-3.5.0.tar.gz
+      - fasttext==0.9.2
+      - sentencepiece
+      - evaluate~=0.4.0
